@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 const mongodb = process.env.MONGO;
-mongoose.connect(`mongodb+srv://nithishkumark72_db:29061999@cluster0.1qqt2pm.mongodb.net/authdb`)
+mongoose.connect(`${process.env.MONGO}/authdb`)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
